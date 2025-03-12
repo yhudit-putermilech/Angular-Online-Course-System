@@ -12,21 +12,11 @@ export class CourseService {
 
   constructor(private http: HttpClient) { }
   private getHeaders(): HttpHeaders {
-    const headers: any = {
-      'Content-Type': 'application/json'
-    };
-    if (typeof window !== 'undefined' && window.sessionStorage) {
-      const token = sessionStorage.getItem('token');
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
-      }
-    }
       const token = sessionStorage.getItem('authToken'); // קבלת ה-token מה-session storage
     return new HttpHeaders({
       'Authorization': `Bearer ${token}`,
       'Content-Type': 'application/json'
     });
-    return headers;
   }
 
   // פונקציה לקבלת כל הקורסים
