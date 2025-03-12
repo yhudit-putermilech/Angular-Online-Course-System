@@ -1,0 +1,85 @@
+/* עיצוב ה-Toolbar */
+.toolbar {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    color: #333;
+    padding: 12px;
+  }
+  
+  /* עיצוב התפריט */
+  .nav-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .menu li:hover {
+    transform: scale(1.1);
+  }
+  
+  /* עיצוב קישורים */
+  .menu a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #333;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: rgba(173, 216, 230, 0.3);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .menu a:hover,
+  .menu a.active {
+    background: #f9a825;
+    color: white;
+  }
+  
+  /* עיצוב כפתור מחיקה */
+  .delete-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff5252;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .delete-btn:hover {
+    background: #d32f2f;
+  }
+  
+  /* אנימציה לאייקונים */
+  mat-icon {
+    font-size: 24px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .menu a:hover mat-icon,
+  .delete-btn:hover mat-icon {
+    transform: rotate(-10deg);
+  }
+  

@@ -1,0 +1,43 @@
+<!-- <h2>Course Details for Course ID: {{ courseId }}</h2>
+<div >
+  <h3>{{ courseDetails.title }}</h3>
+  <p>{{ courseDetails.description }}</p>
+  <button (click)="showLessons()">הצג שיעורים</button>
+  <router-outlet></router-outlet>
+</div> -->
+<!-- <div class="course">
+  <mat-card class="course-card">
+    <mat-card-header>
+      <mat-card-subtitle>Course ID: {{ courseId }}</mat-card-subtitle>
+      <mat-card-title>{{ courseDetails.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ courseDetails.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="showLessons()">הצג שיעורים</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<router-outlet></router-outlet> -->
+
+
+
+
+<div class="course-container">
+  <mat-card class="course-card">
+    <mat-card-header>
+      <mat-card-title>📚 {{ courseDetails.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ courseDetails.description }}</p>
+      <p class="course-id">🔖 קורס מספר: {{ courseId }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="showLessons()">📖 הצג שיעורים</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <router-outlet></router-outlet>
+</div>
+
